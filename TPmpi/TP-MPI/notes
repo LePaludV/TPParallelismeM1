@@ -1,0 +1,36 @@
+Ronan.Guivarch@irit.fr
+
+exo7 = notes a déposer 1 semaine après dernier tp 
+
+Code séquentiel -> code parallèle 
+	Reflexion 
+	Parallelisation
+	1) déterminer les calculs parallélisables.
+	2) Communication 
+		a. communication des processus () 
+		b. Calcul -> resultat locaux
+		c. communication des résultat locaux
+		
+		
+Si pas assez de proc sur le pc : --oversubscribe 
+mpirun -n 9 --oversubscribe python3 scatter.py
+
+		
+Exo 2:
+Le print ralentir l'execution
+
+Avec nb = 100001
+Avec 1 processus : 0.20 s
+Avec 2 processus : 0.12 s
+Avec 4 processus : 0.07 s
+
+Avec nb = 1000000
+Avec 1 processus : 2.6 s
+Avec 2 processus : 1.94 s
+Avec 4 processus : 1.81 s
+
+Exo 4:
+
+la différence vient du fait que le plus le nombre est grand plus le temps est long, 
+donc le dernier proc prendra forcément plus de temps que le premier 
+alors que quand on répartie equitablement ils vont tous prendre quasiment le même temps car même ordre de grandeur
